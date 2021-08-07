@@ -2,17 +2,30 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
 // A very simplistic car driving on the x-z plane.
 
 public class Drive : MonoBehaviour
 {
     public float speed = 10.0f;
     public float rotationSpeed = 100.0f;
+    public GameObject fuel;
 
     void Start()
     {
 
     }
+
+    void calcDistance()
+    {
+        Vector3 tankPos = transform.up; // tank Position / Facing direction
+        Vector3 fuelDir = fuel.transform.position - this.transform.position; // relatvie vector pointing to Fuel
+
+        float distance = Mathf.Sqrt(Mathf.Pow(tankPos.x-fuelDir.x,2)+ Mathf.Pow(tankPos.y - fuelDir.y, 2));
+        Debug.Log("Distance: " + distance);
+
+
+    } 
 
     void Update()
     {
@@ -31,6 +44,11 @@ public class Drive : MonoBehaviour
 
         // Rotate around our y-axis
         transform.Rotate(0, 0, -rotation);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            calcDistance();
+        }
 
     }
 }
