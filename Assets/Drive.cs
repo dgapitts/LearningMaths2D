@@ -22,7 +22,12 @@ public class Drive : MonoBehaviour
         Vector3 fuelDir = fuel.transform.position - this.transform.position; // relatvie vector pointing to Fuel
 
         float distance = Mathf.Sqrt(Mathf.Pow(tankPos.x-fuelDir.x,2)+ Mathf.Pow(tankPos.y - fuelDir.y, 2));
+        float unityDistance = Vector3.Distance(tankPos, fuelDir);
+        float delta = distance - unityDistance;
+
         Debug.Log("Distance: " + distance);
+        Debug.Log("unityDistance: " + unityDistance);
+        Debug.Log("delta: " + delta);
 
 
     } 
