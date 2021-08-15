@@ -16,20 +16,34 @@ public class Drive : MonoBehaviour
 
     }
 
-    void calcDistance()
+    void calcAngle()
+    {
+        Vector3 tankUp = transform.up; // tank Position / Facing direction
+        Vector3 fuelDir = fuel.transform.position - this.transform.position; // relatvie vector pointing to Fue
+        float calcAngleRadians = Mathf.Acos(  ((tankUp.x*fuelDir.x)+(tankUp.y*fuelDir.y))
+                                                 / (tankUp.magnitude*fuelDir.magnitude)  );
+        Debug.Log("calcAngleRadians: " + calcAngleRadians);
+        Debug.Log("Convert calcAngleRadians to regular angle" + (calcAngleRadians * Mathf.Rad2Deg));
+        Debug.DrawRay(this.transform.position, tankUp * 3, Color.yellow, 3);
+        Debug.DrawRay(this.transform.position, fuelDir, Color.green, 3);
+
+        // Final cross check using built in unity functions
+        Debug.Log("Unity angle" + Vector3.Angle(tankUp, fuelDir));
+       
+    }
+
+        void calcDistance()
     {
         Vector3 tankPos = transform.up; // tank Position / Facing direction
         Vector3 fuelDir = fuel.transform.position - this.transform.position; // relatvie vector pointing to Fuel
 
         float distance = Mathf.Sqrt(Mathf.Pow(tankPos.x-fuelDir.x,2)+ Mathf.Pow(tankPos.y - fuelDir.y, 2));
-        float unityDistance = Vector3.Distance(tankPos, fuelDir);
-        float delta = distance - unityDistance;
+        float unityDistance = Vector3.Distance(tankPos, fuelDir); // regular unity built in method (which should agree with Pythagoras's theorem)
+        float delta = distance - unityDistance; // lets see if our calculation to match up 
 
         Debug.Log("Distance: " + distance);
         Debug.Log("unityDistance: " + unityDistance);
         Debug.Log("delta: " + delta);
-
-
     } 
 
     void Update()
@@ -52,7 +66,8 @@ public class Drive : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            calcDistance();
+            //calcDistance();
+            calcAngle();
         }
 
     }
