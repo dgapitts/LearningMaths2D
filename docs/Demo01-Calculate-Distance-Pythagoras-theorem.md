@@ -1,4 +1,4 @@
-## Demo01 - Calculate Distances the old fashioned way - welcome to Pythagoras's theorem
+## Demo01 - Calculate distances the old fashioned way - welcome (back) to Pythagoras's theorem
 
 This course is going to get into some pretty advanced maths, but it starts with relatively simple high school maths around generating vectors to find the distince between two roaming game objects.
 
@@ -56,6 +56,8 @@ Basically there are two key things going on here
 here is actual code...
 
 ![Demo01-code-changes](Demo01-code-changes.png)
+
+plus the raw git log text, where we can see the GUI config changes (although this is a bit obsfucated - not really meant for end-user reviews)
 ```
 ~/projects/github/LearningMaths2D $ git commit -m "Demo01-Calculate-Distance-Pythagoras-theorem"
 [main fc2fef9] Demo01-Calculate-Distance-Pythagoras-theorem
