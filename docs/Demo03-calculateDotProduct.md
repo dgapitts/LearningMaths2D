@@ -1,4 +1,4 @@
-## Demo03 - Calculate Vectory Dot Product
+## Demo03 - Calculate Vectory Dot Product and then angle between two vectors
 
 ## Visualizing vectors tankUp (Tank Upwards/Facing direction) and fuelDir (direction from Tank to Fuel)
 
