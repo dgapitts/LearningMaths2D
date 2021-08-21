@@ -107,8 +107,20 @@ Drive:Update () (at Assets/Drive.cs:70)
 
 ## convert radians to degrees
 
+Given 2π x rad = 360, then 1 rad is just over 57% degrees
 
 > 1rad × 180/π = 57,296°
+
+That isn't terrible intuitive, but I started using radians when we started doing calculus at school
+
+> Calculus is always done in radian measure.    
+https://teachingcalculus.com/2012/10/12/951/
+
+I dont remember all the details now, but we started with the *key point* you get a very clean way to compute
+
+> derivative or antiderivative of any trigonometric function
+
+![Demo03-derivative-or-antiderivative-trigonometric-function.png](Demo03-derivative-or-antiderivative-trigonometric-function.png)
 
 
 
