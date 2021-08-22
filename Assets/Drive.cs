@@ -29,8 +29,14 @@ public class Drive : MonoBehaviour
 
         // Final cross check using built in unity functions
         Debug.Log("Unity angle" + Vector3.Angle(tankUp, fuelDir));
+
+
+        // Un-signed angle - sometimes in right direction but sometime right amount but wrong direction
+        this.transform.Rotate(0,0,calcAngleRadians * Mathf.Rad2Deg);
+
        
     }
+
 
         void calcDistance()
     {
