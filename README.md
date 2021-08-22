@@ -11,3 +11,4 @@ Before starting the course you do need to be familiar with Unity and switching b
 * [Demo01 Calculate Distances the old fashioned way - welcome to Pythagoras's theorem](docs/Demo01-Calculate-Distance-Pythagoras-theorem.md)
 * [Demo02 debugging minor calculateDistance function differences with Vector3 object (3D not 2D!)](docs/Demo02-debugging-minor-calculateDistance-function-differences-Vector3-is-3D-not-2D.md)
 * [Demo03 Calculate Vectory Dot Product and then angle between two vectors](docs/Demo03-calculateDotProduct.md)
+* [Demo03 continued : our next Problem is "turning direction" i.e. clockwise or anticlockwise?](docs/Demo03-continued-nextProblem-turningDirection.md)
